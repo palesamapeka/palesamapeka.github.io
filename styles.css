@@ -81,13 +81,14 @@ body {
 
 
 /**/
+
 .container {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
-   grid-gap: 1em;
    /*height of rows =100px*/
    grid-auto-rows: minmax(100px, auto);
    justify-content: center;
+   padding-top: 250px;
 }
 
 .container>div {
@@ -97,4 +98,12 @@ body {
 
 .container>div:nth-child(odd) {
    background: #ddd;
+}
+
+img{
+    width: 290px;
+    height: 290px;
+    vertical-align: middle;
+    padding-top:25px;
+    border-radius: 50%;
 }
