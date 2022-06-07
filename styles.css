@@ -186,6 +186,12 @@
             padding-left: 5px;
         }
         
+        #email,
+        #name,
+        #comment-box::placeholder {
+            color: rgb(159, 158, 183);
+        }
+        
         .form-btn {
             width: 100px;
             height: 40px;
