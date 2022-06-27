@@ -174,7 +174,7 @@
             .contact-form {
                 max-width: 1000px;
                 margin: 0 auto;
-                background: rgba(225, 220, 220, 0.8);
+                background: rgb(204, 194, 194);
                 padding: 30px;
                 border-radius: 5px;
                 display: flex;
@@ -285,6 +285,9 @@
             }
             
             @media screen and(max-width:600px) {
+                .wrapper {
+                    margin-top: 15px;
+                }
                 .contact-form {
                     flex-direction: column;
                 }
