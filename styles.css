@@ -13,85 +13,87 @@
                 height: 100vh;
             }
             
-            .nav {
-                border: 1px solid #eef1f6;
-            }
-            
-            .nav__toggle {
-                position: absolute;
-                cursor: pointer;
-                margin: 0rem 1rem;
-                right: 0;
-            }
-            
-            .nav__toggle svg {
-                width: 1.5rem;
-                fill: #5c007a;
-            }
-            
-            .nav__toggle .close {
-                display: none;
-            }
-            
-            .nav__toggle .menu {
-                margin-top: 0.2rem;
-            }
-            
-            .nav__checkbox {
-                display: none;
-            }
-            
-            .nav__menu {
+            .navbar {
                 display: flex;
-                flex-direction: column;
-                gap: 2rem;
+                position: relative;
+                justify-content: space-between;
                 align-items: center;
-                margin: 1rem;
+                background-color: #333;
+                color: white;
             }
             
-            .nav__menu li {
+            .brand-title {
+                font-size: 1.5rem;
+                margin: .5rem;
+            }
+            
+            .navbar-links {
+                height: 100%;
+            }
+            
+            .navbar-links ul {
+                display: flex;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .navbar-links li {
                 list-style: none;
-                display: none;
             }
             
-            .nav__menu li:first-child {
-                margin-right: auto;
+            .navbar-links li a {
                 display: block;
-            }
-            
-            .nav__menu a {
                 text-decoration: none;
-                color: inherit;
-                font-size: 1.2rem;
-                display: inline-block;
+                color: white;
+                padding: 1rem;
             }
             
-            .nav__menu svg {
-                width: 1.5rem;
-                fill: #2a324b;
+            .navbar-links li:hover {
+                background-color: #555;
             }
             
-            #nav__checkbox:checked~ul.nav__menu li {
-                display: block;
-            }
-            
-            #nav__checkbox:checked~label.nav__toggle .close {
-                display: block;
-            }
-            
-            #nav__checkbox:checked~label.nav__toggle .menu {
+            .toggle-button {
+                position: absolute;
+                top: .75rem;
+                right: 1rem;
                 display: none;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 30px;
+                height: 21px;
             }
             
-            @media only screen and (min-width: 560px) {
-                .nav__toggle {
+            .toggle-button .bar {
+                height: 3px;
+                width: 100%;
+                background-color: white;
+                border-radius: 10px;
+            }
+            
+            @media (max-width: 800px) {
+                .navbar {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                .toggle-button {
+                    display: flex;
+                }
+                .navbar-links {
                     display: none;
+                    width: 100%;
                 }
-                .nav__menu {
-                    flex-direction: row;
+                .navbar-links ul {
+                    width: 100%;
+                    flex-direction: column;
                 }
-                .nav__menu li {
-                    display: block;
+                .navbar-links ul li {
+                    text-align: center;
+                }
+                .navbar-links ul li a {
+                    padding: .5rem 1rem;
+                }
+                .navbar-links.active {
+                    display: flex;
                 }
             }
             
