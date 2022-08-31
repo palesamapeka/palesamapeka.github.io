@@ -15,11 +15,13 @@
             
             .navbar {
                 display: flex;
-                position: relative;
+                position: fixed;
+                width: 100%;
                 justify-content: space-between;
                 align-items: center;
-                background-color: #333;
+                background-color: #2a324b;
                 color: white;
+                top: 0;
             }
             
             .brand-title {
@@ -49,7 +51,8 @@
             }
             
             .navbar-links li:hover {
-                background-color: #555;
+                background-color: rgb(204, 194, 194);
+                color: #2a324b;
             }
             
             .toggle-button {
