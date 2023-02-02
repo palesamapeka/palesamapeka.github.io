@@ -14,6 +14,9 @@ body {
     height: 100vh;
 }
 
+
+/*Nav bar*/
+
 .navbar {
     display: flex;
     position: fixed;
