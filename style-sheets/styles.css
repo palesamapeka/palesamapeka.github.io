@@ -118,7 +118,7 @@ body {
     justify-content: center;
     padding-top: 250px;
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 5rem;
     padding-left: 5%;
     padding-right: 5%;
     margin-bottom: 2.5rem;
@@ -139,6 +139,7 @@ img {
 
 a {
     color: #2a324b;
+    cursor: pointer;
 }
 
 a:hover {
@@ -186,6 +187,7 @@ button {
     height: minmax(25px, auto);
     width: 150px;
     margin: 20px;
+    cursor: pointer;
 }
 
 button:hover {
