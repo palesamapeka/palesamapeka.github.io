@@ -1,10 +1,7 @@
-const toggleButton = document.getElementsByClassName("toggle-button")[0];
-const navbarLinks = document.getElementsByClassName("navbar-links")[0];
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
 
-toggleButton.addEventListener("click", () => {
-    navbarLinks.classList.toggle("active");
-});
-
-navbarLinks.addEventListener("click", () => {
-    navbarLinks.classList.toggle("active");
-});
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
