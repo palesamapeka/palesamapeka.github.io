@@ -320,3 +320,30 @@ a:hover{
   footer p {
     text-align: center;
   }
+
+  .hidden{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+  }
+
+  .show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+  
+  @media (prefers-reduced-motion) {
+    .hidden{
+      transition: none;
+    }
+  }
+
+
+.section-container:nth-child(2){
+  transition-delay: 200ms;
+}
+.section-container:nth-child(3){
+  transition-delay: 400ms;
+}
