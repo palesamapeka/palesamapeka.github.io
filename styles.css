@@ -226,7 +226,7 @@ section {
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
-    font-size: 1rem; /* Reduced font size for smaller screens */
+    font-size: 1rem; 
 }
 
 .btn-color-1,
@@ -322,4 +322,52 @@ footer p {
 
 p{
   text-align: center;
+}
+
+/*FORM*/
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #020202;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #000000;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #000000;
+  color: #ffffff;
 }
