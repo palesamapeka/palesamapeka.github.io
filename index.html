@@ -61,16 +61,22 @@
     <section id="about" class="hidden">
       <p class="section__text">Get To Know Me!</p>
       <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container hidden">
-          <!-- replace this with cooler picture -->
-          <img src="./assets/EB893080-3BA5-4559-BBBD-FF522FB255AD.jpeg" class="about-pic"> 
-        </div>
-        
+      <div class="section-container">        
         <div id="tech-stack" class="about-details-container hidden">
           <div class="about-containers">
+            <div class="text-container hidden">
+              <p class="section__text__p3">Hi! I am <strong>Palesa</strong> (aka Barry), and I am an aspiring web developer. I'm currently a recruit at <a>Umuzi.org</a>, 
+                where I'm learning and honing my development skills. <br>My goal is to build better and more inclusive software.
+                I obtained my National Diploma in Software Development in 2021. <br>I majored in mobile application development, 
+                and I have decided to branch off and learn more technologies and programming techniques.</p>
+  
+                <p class="section__text__p3">If I'm not writing code and scratching my head trying to fix a bug,
+                  you can find me either watching <br>"The Big Bang Theory" for the 60th time (probably), reading a book or listening 
+                  to music. I would like to think that my music taste is elite. Don't believe me? &#128527; Here's one of my many playlists.
+                </p>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2eQU54GK7uXqWSSDasINWi?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
             <div class="details-container">
-              
               <!-- <img src="/assets/experience.png" class="icon"> -->
               <h1>Tech Stack</h1>
               <p>Java</p>
@@ -94,23 +100,55 @@
                <p><br></p>
                <p>National Senior Certificate <br>Welkom High School <br>2015</p>
              </div>
+             <div class="details-container hidden">
+              <!-- <img src="/assets/education.png" class="icon"> -->
+              <h1>Work Experience</h1>
+              <p>Umuzi Academy <br>Junior Web Developer</p>
+              <p><br></p>
+              <p>Infinite Luxe <br>Personal Assistance</p>
             </div>
-            <div class="text-container hidden">
-              <p class="section__text__p3">Hi! I am <strong>Palesa</strong> (aka Barry), and I am an aspiring web developer. I'm currently a recruit at <a>Umuzi.org</a>, 
-                where I'm learning and honing my development skills. <br>My goal is to build better and more inclusive software.
-                I obtained my National Diploma in Software Development in 2021. <br>I majored in mobile application development, 
-                and I have decided to branch off and learn more technologies and programming techniques.</p>
-  
-                <p class="section__text__p3">If I'm not writing code and scratching my head trying to fix a bug,
-                  you can find me either watching <br>"The Big Bang Theory" for the 60th time (probably), reading a book or listening 
-                  to music. I would like to think that my music taste is elite. Don't believe me? &#128527; Here's one of my many playlists.
-                </p>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2eQU54GK7uXqWSSDasINWi?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+            <div class="details-container hidden">
+              <!-- <img src="/assets/education.png" class="icon"> -->
+              <form action="/submit_form" method="post" id="visitorForm">
+                <div class="form-group">
+                    <label for="visitorName">Visitor Name:</label>
+                     <input type="text" class="form-control" id="visitorName" name="visitorName" required> 
+                </div>
+    
+                <div class="form-group">
+                    <label for="assistantName">Assistant Name:</label>
+                    <input type="text" class="form-control" id="assistantName" name="assistantName" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="visitorAge">Visitor's Age:</label>
+                    <input type="number" class="form-control" id="visitorAge" name="visitorAge" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="dateOfVisit">Date of Visit:</label>
+                    <input type="date" class="form-control" id="dateOfVisit" name="dateOfVisit" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="timeOfVisit">Time of Visit:</label>
+                    <input type="time" class="form-control" id="timeOfVisit" name="timeOfVisit" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="comments">Comments:</label>
+                    <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+                </div>
+    
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
             </div>
+            </div>
+            
           </div>
         </div>
       </div>
-      <img src="./assets/arrow.png" alt="arrow icon" class="icon" onclick="location.href='./#contact'">
     </section>
 
     <footer>
@@ -126,7 +164,7 @@
         </div>
         </div>
       </nav>
-      <p>Made with &#128151; by Palesa Mapeka, 2023</p>
+      <p>Made with &#128151; by Palesa Mapeka, 2024</p>
     </footer>
 
     <script src="script.js"></script>
