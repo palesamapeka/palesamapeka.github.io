@@ -2,161 +2,202 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palesa Mapeka</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="media_queries.css">
-    <link rel="icon" href="./assets/rainbow-svgrepo-com.svg" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palesa Mapeka</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="media_queries.css">
+  <link rel="icon" href="./assets/rainbow-svgrepo-com.svg" />
 
 </head>
 
 <body>
-    <!-- Desktop Navigation -->
-    <nav id="desktop-nav">
-        <div class="logo">Palesa Mapeka</div>
-        <div>
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#tech-stack">Tech Stack</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+  <!-- Desktop Navigation -->
+  <nav id="desktop-nav">
+    <div class="logo">Palesa Mapeka</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#tech-stack">Tech Stack</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-      <!-- Mobile & Smaller Screens -->
-      <nav id="hamburger-nav">
-        <div class="logo">Palesa</div>
-        <div class="hamburger-menu">
-          <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+  <!-- Mobile & Smaller Screens -->
+  <nav id="hamburger-nav">
+    <div class="logo">Palesa</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#tech-stack" onclick="toggleMenu()">Tech Stack</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <section id="profile" class="hidden">
+    <div class="section__pic-container">
+      <img src="assets/palesa (1).jpg" alt="Palesa's profile Picture" class="profile__picture">
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello! I'm</p>
+      <h1 class="title">Palesa Mapeka</h1>
+      <p class="section__text__p2">Junior Web Developer</p>
+
+      <div class="btn-container">
+        <button class="btn btn-color-cv" onclick="window.open('assets/Palesa Mapeka.pdf')">Download CV</button>
+        <button class="btn btn-color-2" onclick="location.href='./#contact'">Contact Me</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" class="hidden">
+    <p class="section__text">Get To Know Me!</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div id="about class=" about-details-container hidden">
+        <div class="about-containers">
+          <div class="text-container hidden">
+            <p class="section__text__p3">Hi! I am <strong>Palesa</strong> (aka Barry), and I am an aspiring web
+              developer. I was a recruit at <strong><a>Umuzi.org</a></strong>,
+              where I learnt and honed my development skills. <br>My goal is to build better and more inclusive
+              software.
+              I obtained my National Diploma in Software Development in 2021. <br>I majored in mobile application
+              development,
+              and I have decided to branch off and learn more technologies and programming techniques.</p>
+
+            <p class="section__text__p3">If I'm not writing code and scratching my head trying to fix a bug,
+              you can find me either watching <br>"The Big Bang Theory" for the 60th time (probably), reading a book or
+              listening
+              to music. I would like to think that my music taste is elite. Don't believe me? &#128527; Here's one of my
+              many playlists.
+            </p>
+            <iframe style="border-radius:12px"
+              src="https://open.spotify.com/embed/playlist/2eQU54GK7uXqWSSDasINWi?utm_source=generator" width="100%"
+              height="600" frameBorder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
           </div>
-          <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#tech-stack" onclick="toggleMenu()">Tech Stack</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+
+          <h1>Tech Stack</h1>
+          <div id="tech-stack" class="container">
+            <div class="column">
+              <h3>Web Development</h3>
+              <div>Boostrap</div>
+              <div>Express.js</div>
+              <div>PostgreSQL</div>
+              <div>Docker</div>
+              <div>Visual Studio Code</div>
+              <div>HTML5</div>
+              <div>CSS</div>
+              <div>Webpack</div>
+              <div>Npm</div>
+              <div>Node.js</div>
+              <div>Jasmine</div>
+            </div>
+
+            <div class="column">
+              <h3>Android Development</h3>
+              <div>IntelliJ IDEA</div>
+              <div>Android Studio</div>
+              <div>Firebase</div>
+              <div>Backendless</div>
+              <div>MySQL</div>
+              <div>SQLite</div>
+              <div>XML</div>
+              <div>Gradle</div>
+            </div>
+
+            <div class="column">
+              <h3>Version Control</h3>
+              <div>Git</div>
+              <div>GitHub</div>
+            </div>
+
+            <div class="column">
+              <h3>Programming Languages</h3>
+              <div>Java</div>
+              <div>JavaScript</div>
+              <div>C#</div>
+            </div>
           </div>
-        </div>
-      </nav>
-    
-    <section id="profile" class="hidden">
-        <div class="section__pic-container">
-            <img src="assets/palesa (1).jpg" alt="Palesa's profile Picture" class="profile__picture">
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello! I'm</p>
-            <h1 class="title">Palesa Mapeka</h1>
-            <p class="section__text__p2">Junior Web Developer</p>
-            
-            <div class="btn-container">
-                <button class="btn btn-color-cv" onclick="window.open('assets/Palesa Mapeka.pdf')">Download CV</button>
-                <button class="btn btn-color-2" onclick="location.href='./#contact'">Contact Me</button>
-            </div>
-            
-        </div>
-    </section>
 
-    <section id="about" class="hidden">
-      <p class="section__text">Get To Know Me!</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">        
-        <div id="about class="about-details-container hidden">
-          <div class="about-containers">
-            <div class="text-container hidden">
-              <p class="section__text__p3">Hi! I am <strong>Palesa</strong> (aka Barry), and I am an aspiring web developer. I was a recruit at <strong><a>Umuzi.org</a></strong>, 
-                where I learnt and honed my development skills. <br>My goal is to build better and more inclusive software.
-                I obtained my National Diploma in Software Development in 2021. <br>I majored in mobile application development, 
-                and I have decided to branch off and learn more technologies and programming techniques.</p>
-  
-                <p class="section__text__p3">If I'm not writing code and scratching my head trying to fix a bug,
-                  you can find me either watching <br>"The Big Bang Theory" for the 60th time (probably), reading a book or listening 
-                  to music. I would like to think that my music taste is elite. Don't believe me? &#128527; Here's one of my many playlists.
-                </p>
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2eQU54GK7uXqWSSDasINWi?utm_source=generator" width="100%" height="600" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </div>
-            <div id="tech-stack"class="details-container">
-              <h1>Tech Stack</h1>
-              <p>Java</p>
-              <p>XML</p>
-              <p>Gradle</p>
-              <p>JavaScript</p>
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Visual Studio Code</p>
-              <p>InteliJ IDEA</p>
-              <p>Android Studio</p>
-              <p>Git</p>
-              <p>GitHub</p>
-              <p>Node.js</p>
-            </div>
+          <div class="details-container hidden">
+            <!-- <img src="/assets/education.png" class="icon"> -->
+            <h1>Education</h1>
+            <p>N. Dip. Information Technology: Software Development <br>Central University of Technology <br>2021</p>
+            <p><br></p>
+            <p>National Senior Certificate <br>Welkom High School <br>2015</p>
+          </div>
+          <div class="details-container hidden">
+            <!-- <img src="/assets/education.png" class="icon"> -->
+            <h1>Work Experience</h1>
+            <p>Umuzi Academy <br>Junior Web Developer</p>
+            <br>
+            <p>Infinite Luxe <br>Personal Assistant</p>
+            <br>
+            <p>Quantanite <br>Tech Support</p>
+          </div>
 
-            <div class="details-container hidden">
-               <!-- <img src="/assets/education.png" class="icon"> -->
-               <h1>Education</h1>
-               <p>N. Dip. Information Technology: Software Development <br>Central University of Technology <br>2021</p>
-               <p><br></p>
-               <p>National Senior Certificate <br>Welkom High School <br>2015</p>
-             </div>
-             <div class="details-container hidden">
-              <!-- <img src="/assets/education.png" class="icon"> -->
-              <h1>Work Experience</h1>
-              <p>Umuzi Academy <br>Junior Web Developer</p>
-              <br>
-              <p>Infinite Luxe <br>Personal Assistant</p>
-              <br>
-              <p>Quantanite <br>Tech Support</p>
-            </div>
+          <div class="details-container hidden">
+            <h1 id="contact">Contact Me</h1>
 
-            <div class="details-container hidden">
-              <h1 id="contact">Contact Me</h1>
+            <form method="post" id="form">
+              <input type="hidden" name="access_key" value="2a81889f-a835-40b0-9612-9aa2cceed5f3">
 
-              <form method="post" id="form">
-                <input type="hidden" name="access_key" value="2a81889f-a835-40b0-9612-9aa2cceed5f3">
+              <div class="form-group">
+                <input type="text" class="form-control" id="visitorName" name="Name" placeholder="Name" required>
+              </div>
 
-                <div class="form-group">
-                     <input type="text" class="form-control" id="visitorName" name="Name" placeholder="Name" required> 
-                </div>
-    
-                <div class="form-group">
-                    <input type="email" class="form-control" id="visitorEmail" name="Email" placeholder="Email" required>
-                </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="visitorEmail" name="Email" placeholder="Email" required>
+              </div>
 
-                <div class="form-group">
-                  <input type="text" class="form-control" id="visitorSubject" name="Subject" placeholder="Subject" required>
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control" id="comments" name="comments" placeholder="Comments" rows="4" cols="80"></textarea>
-                </div>
-    
-                <button type="submit" class="btn">Submit</button>
-                <div id="result"></div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="visitorSubject" name="Subject" placeholder="Subject"
+                  required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comments" rows="4"
+                  cols="80"></textarea>
+              </div>
+
+              <button type="submit" class="btn">Submit</button>
+              <div id="result"></div>
             </form>
-            </div>
-            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    </div>
+  </section>
 
-    <footer>
-      <nav>
-        <div id="contact" class="nav-links-container">
-          <div id="socials-container">
-            <img src="assets/linkedin.png" alt="My LinkedIn Profile" class="icon" onclick="location.href='https://www.linkedin.com/in/palesa-mapeka/'">
-            <img src="assets/IG.png" alt="My Instagram Profile" class="icon" onclick="location.href='https://www.instagram.com/sieg.fried_/'">
-            <img src="assets/github.png" alt="My Github Profile" class="icon" onclick="location.href='https://github.com/palesamapeka'">
-            <a onclick="window.open('mailto:palesamapeka97@gmail.com','_blank')"
-              ><img src="./assets/email.png" class="icon"></a
-            >
+  <footer>
+    <nav>
+      <div id="contact" class="nav-links-container">
+        <div id="socials-container">
+          <img src="assets/linkedin.png" alt="My LinkedIn Profile" class="icon"
+            onclick="location.href='https://www.linkedin.com/in/palesa-mapeka/'">
+          <img src="assets/IG.png" alt="My Instagram Profile" class="icon"
+            onclick="location.href='https://www.instagram.com/sieg.fried_/'">
+          <img src="assets/github.png" alt="My Github Profile" class="icon"
+            onclick="location.href='https://github.com/palesamapeka'">
+          <a onclick="window.open('mailto:palesamapeka97@gmail.com','_blank')"><img src="./assets/email.png"
+              class="icon"></a>
         </div>
-        </div>
-      </nav>
-      <p>Made with &#128151; by Palesa Mapeka, 2024</p>
-    </footer>
+      </div>
+    </nav>
+    <p>Made with &#128151; by Palesa Mapeka, 2024</p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
