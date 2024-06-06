@@ -229,8 +229,11 @@ section {
     font-size: 1rem; 
 }
 
-.btn-color-1,
-.btn-color-2 {
+.btn-color-cv{
+    background-color: #000000;
+    color: white
+}
+.btn-color-1{
     border: rgb(53, 53, 53) 0.1rem solid;
 }
 
@@ -239,8 +242,7 @@ section {
     cursor: pointer;
 }
 
-.btn-color-1,
-.btn-color-2:hover {
+.btn-color-1:hover {
     background: rgb(53, 53, 53);
     color: white;
 }
@@ -249,8 +251,9 @@ section {
     background: rgb(0, 0, 0);
 }
 
-.btn-color-2 {
-    background: none;
+.btn-color-cv:hover {
+    background: white;
+    color: black
 }
 
 .btn-color-2:hover {
