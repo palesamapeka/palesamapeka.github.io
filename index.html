@@ -111,7 +111,10 @@
 
             <div class="details-container hidden">
               <h1 id="contact">Contact Me</h1>
-              <form action="https://formsubmit.co/palesamapeka97@gmail.com" method="post" id="visitorForm">
+
+              <form method="post" id="form">
+                <input type="hidden" name="access_key" value="2a81889f-a835-40b0-9612-9aa2cceed5f3">
+
                 <div class="form-group">
                      <input type="text" class="form-control" id="visitorName" name="visitorName" placeholder="Name" required> 
                 </div>
@@ -129,6 +132,7 @@
                 </div>
     
                 <button type="submit" class="btn">Submit</button>
+                <div id="result"></div>
             </form>
             </div>
             </div>
