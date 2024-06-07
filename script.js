@@ -31,7 +31,7 @@ function formSubmission() {
     const json = JSON.stringify(object);
 
     result.innerHTML = "Please wait...";
-    result.style.color = "red";
+    result.style.fontWeight = "Bold";
     result.style.paddingTop = "1.5rem"
 
     fetch("https://api.web3forms.com/submit", {
