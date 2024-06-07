@@ -7,55 +7,60 @@ function toggleMenu() {
 }
 
 const hiddenElements = document.querySelectorAll(".hidden");
-const observer = new IntersectionObserver((entries) =>{
-  entries.forEach((entry) =>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("show")
-    }else{
-      entry.target.classList.remove("show")
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
     }
-  })
-})
+  });
+});
 
 hiddenElements.forEach((el) => observer.observe(el));
 
-const form = document.getElementById('form');
-const result = document.getElementById('result');
+function formSubmission() {
+  const form = document.getElementById("form");
+  const result = document.getElementById("result");
 
-form.addEventListener('submit', function(e) {
+  form.addEventListener("submit", function (e) {
     const formData = new FormData(form);
     e.preventDefault();
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
 
-    result.innerHTML = "Please wait..."
+    result.innerHTML = "Please wait...";
+    result.style.color = "red";
+    result.style.paddingTop = "1.5rem"
 
-    fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: json
-        })
-        .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-                result.innerHTML = json.message;
-            } else {
-                console.log(response);
-                result.innerHTML = json.message;
-            }
-        })
-        .catch(error => {
-            console.log(error);
-            result.innerHTML = "Something went wrong!";
-        })
-        .then(function() {
-            form.reset();
-            setTimeout(() => {
-                result.style.display = "none";
-            }, 3000);
-        });
-});
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          result.innerHTML = json.message;
+        } else {
+          console.log(response);
+          result.innerHTML = json.message;
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        result.innerHTML = "Something went wrong!";
+      })
+      .then(function () {
+        form.reset();
+        setTimeout(() => {
+          result.style.display = "none";
+        }, 10000);
+      });
+  });
+}
+formSubmission();
