@@ -327,12 +327,8 @@ section {
     text-align: center;
 }
 
-.container {
-    padding: 1.5rem;
-    display: flex;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
+.details-container h3{
+    padding-top: 1.5rem;
 }
 
 h1{
@@ -396,7 +392,7 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-    max-width: 100%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -421,6 +417,19 @@ button {
 button:hover {
     background-color: #000000;
     color: #ffffff;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    form {
+        max-width: 300px;
+    }
 }
 
 /* PRIDE MONTH EFFECT */
