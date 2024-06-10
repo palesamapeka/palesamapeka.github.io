@@ -436,29 +436,26 @@ button:hover {
 
 @keyframes rainbow {
     0% {
-      color: #FF0000; /* Red */
-    }
-    14% {
-      color: #FFA500; /* Orange */
-    }
-    28% {
-      color: #FFFF00; /* Yellow */
-    }
-    42% {
-      color: #00FF00; /* Green */
-    }
-    57% {
-      color: #0000FF; /* Blue */
-    }
-    71% {
-      color: #4B0082; /* Indigo */
-    }
-    85% {
-      color: #8A2BE2; /* Violet */
-    }
-    100% {
-      color: #FF0000; /* Red (looping back) */
-    }
+        color: #E40303; /* Red */
+      }
+      17% {
+        color: #FF8C00; /* Orange */
+      }
+      33% {
+        color: #FFED00; /* Yellow */
+      }
+      50% {
+        color: #008026; /* Green */
+      }
+      67% {
+        color: #24408E; /* Indigo */
+      }
+      83% {
+        color: #732982; /* Violet */
+      }
+      100% {
+        color: #E40303; /* Red (looping back) */
+      }
   }
   
   .rainbow-text {
