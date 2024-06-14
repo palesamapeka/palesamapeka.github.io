@@ -13,23 +13,30 @@ body{
 
 .calculator{
     width: 300px;
-    height: 500px;
-    box-shadow: 5px 5px 30px;
-    background-color: black;
-    border-radius: 10px;
+    height: 510px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
+    background-color: #22252D;
+    border-radius: 12px;
     overflow: hidden;
 }
 
 form input{
     width: 100%;
-    height: 10rem;
+    height: 150px;
     background-color: rgb(71, 65, 65);
     text-align: right;
     color: #ffffff;
-    font-size: 3rem;
-    padding: 2rem;
+    font-size: 1rem;
+    padding: 1rem;
     pointer-events: none;
     border: none;
+    border-radius: 12px;
+}
+
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+    gap: 5px; /* Add some space between the buttons */
 }
 
 .buttons{
