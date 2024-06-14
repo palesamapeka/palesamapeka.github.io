@@ -312,12 +312,6 @@ section {
     border-radius: 2rem;
 }
 
-.arrow {
-    position: absolute;
-    right: -5rem;
-    bottom: 2.5rem;
-}
-
 .details-container {
     padding: 1.5rem;
     background: white;
@@ -325,6 +319,14 @@ section {
     border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    height: 160px;
+    width: 120px;
+    border-radius: 5px;
 }
 
 .details-container h3{
