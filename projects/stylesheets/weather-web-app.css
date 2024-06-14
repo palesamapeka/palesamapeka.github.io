@@ -97,6 +97,10 @@
     margin-top: -6px;
 }
 
+.weather{
+    display: none;
+}
+
 /* Responsive styles */
 @media screen and (max-width: 768px) {
     .card {
