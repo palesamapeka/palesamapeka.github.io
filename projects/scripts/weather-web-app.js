@@ -24,3 +24,8 @@ async function getWeatherInfo(cityName) {
 searchButton.addEventListener("click", () => {
   getWeatherInfo(searchBox.value);
 });
+
+/**
+ * YouTube Link:
+ * https://www.youtube.com/watch?v=MIYQR-Ybrn4&list=TLPQMTQwNjIwMjR_i5en5WxHPQ&index=14
+ */
