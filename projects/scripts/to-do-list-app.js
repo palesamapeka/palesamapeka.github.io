@@ -17,7 +17,17 @@ function addTask() {
   }
   //clear input box
   inputBox.value = "";
+  saveLocalData();
 }
+
+function saveLocalData(){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function getLocalData(){
+    listContainer.innerHTML = localStorage.getItem("data")
+}
+getLocalData();
 
 function closeModal() {
   modal.style.display = "none"; // Hide the modal
@@ -26,7 +36,9 @@ function closeModal() {
 listContainer.addEventListener("click", function (event) {
   if (event.target.tagName === "LI") {
     event.target.classList.toggle("checked");
+    saveLocalData();
   } else if (event.target.tagName === "SPAN") {
     event.target.parentElement.remove();
+    saveLocalData();
   }
 });
