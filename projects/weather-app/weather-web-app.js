@@ -50,5 +50,6 @@ searchButton.addEventListener("click", handleSearch);
 document.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         handleSearch();
+        searchBox.value = "";
     }
 });
