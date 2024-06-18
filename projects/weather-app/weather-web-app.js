@@ -9,7 +9,7 @@ let suggestionUrl = "https://api.openweathermap.org/data/2.5/find?";
 async function getWeatherInfo(cityName) {
   const response = await fetch(apiUrl + cityName + `&appid=${apiKey}`);
   let data = await response.json();
-  console.log(data);
+  //console.log(data);
 
   let city = document.querySelector(".city-name");
   let temperature = document.querySelector(".temperature");
@@ -38,13 +38,17 @@ async function getWeatherInfo(cityName) {
   }
 
   weatherInfo.style.display = "block";
+  console.log(data.weather[0].main)
 }
 
-searchButton.addEventListener("click", () => {
+function handleSearch() {
   getWeatherInfo(searchBox.value);
-});
+}
 
-/**
- * YouTube Link:
- * https://www.youtube.com/watch?v=MIYQR-Ybrn4&list=TLPQMTQwNjIwMjR_i5en5WxHPQ&index=14
- */
+searchButton.addEventListener("click", handleSearch);
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        handleSearch();
+    }
+});
