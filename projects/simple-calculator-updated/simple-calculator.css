@@ -34,6 +34,10 @@
     margin: 10px;
 }
 
+.calculator form input:hover{
+    background: #9db2d0;
+}
+
 form .screen{
     display: flex;
     justify-content: center;
@@ -46,9 +50,16 @@ form .screen input{
     text-align: right;
     flex: 1;
     font-size: 45px;
-    box-shadow: none;
+    box-shadow: none;    
+    font-size: 18px;
 }
 
 form input.equal{
     width: 145px;
+    color: #f07205;
+}
+
+form input.operators{
+    color: #f07205;
+    font-weight: bold;
 }
