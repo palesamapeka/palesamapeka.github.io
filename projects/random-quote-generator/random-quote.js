@@ -1,7 +1,9 @@
+const {textToSpeechOnHover} = require("../global-functions/text-to-speech");X
 const apiUrl = "https://api.quotable.io/random";
 const quote = document.getElementById("quote");
 const newQuoteBtn = document.getElementById("new-quote");
 const tweetBtn = document.getElementById("tweet");
+const author = document.getElementById("author");
 
 async function getRandomQuote(url) {
   const response = await fetch(url);
@@ -29,3 +31,8 @@ newQuoteBtn.addEventListener("click", () => {
 tweetBtn.addEventListener("click", () => {
   tweet();
 });
+
+textToSpeechOnHover(quote);
+textToSpeechOnHover(author);
+textToSpeechOnHover(newQuoteBtn);
+textToSpeechOnHover(tweetBtn);
