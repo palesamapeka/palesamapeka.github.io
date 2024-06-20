@@ -1,27 +1,49 @@
-const utterance = new SpeechSynthesisUtterance();
 const textToUtter = document.querySelector("textarea");
 const button = document.getElementById("play");
 const listOfVoice = document.querySelector("select");
+const paragraph = document.getElementById("hover-text");
+const hero = document.getElementById("hero")
 
-  let voices = [];
+let voices = [];
 
-  window.speechSynthesis.onvoiceschanged = () => {
-    voices = window.speechSynthesis.getVoices(); //gets list of voice available on device
-    utterance.voice = voices[0]; //first available voice that will be used by default
+window.speechSynthesis.onvoiceschanged = () => {
+  voices = window.speechSynthesis.getVoices(); //gets list of voice available on device
 
-    voices.forEach((voice, index) => (listOfVoice.options(index) = new Option(voice.name, index)));
-  };
+  voices.forEach((voice, index) => {
+    let option = new Option(voice.name, index);
+    listOfVoice.add(option);
+  });
+  /**
+   * Populates the select element with all the available voices on the current device
+   */    
 
+  // Set the first available voice as default
+  if (voices.length > 0) {
+    utterance.voice = voices[0];
+  }
+};
+
+function textToSpeech(text) {
+  const utterance = new SpeechSynthesisUtterance();
+  let selectedVoiceIndex = listOfVoice.selectedIndex;
+  utterance.voice = voices[selectedVoiceIndex];
+  utterance.text = text;
+  window.speechSynthesis.speak(utterance);
+}
+
+function textToSpeechOnHover(element){
+  element.addEventListener("mouseover", function(){
+    textToSpeech(this.innerText);
+  })
+}
 
 button.addEventListener("click", () => {
-    utterance.text = textToUtter.value; /**
-    Gets the value from the textarea and converts it from 
-    text to speech
-    */
-  
-    window.speechSynthesis.speak(utterance);
-  });
+  textToSpeech(textToUtter.value)
+});
 
+textToSpeechOnHover(paragraph);
+textToSpeechOnHover(hero);
+textToSpeechOnHover(button);
 
 /**
  * https://www.youtube.com/watch?v=3oDNqHZ7UKY&list=TLPQMTkwNjIwMjR9uGoemOv6gw&index=31
