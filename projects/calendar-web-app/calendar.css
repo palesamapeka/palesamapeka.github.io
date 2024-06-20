@@ -37,7 +37,7 @@
     font-size: 24px;
 }
 
-.clock-left, .clock-right{
+.clock-left, .clock-right, .clock-middle{
     width: 50%;
     height: 100%;
     display: flex;
@@ -51,6 +51,12 @@
     background: orangered;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
+    color: #fff;
+}
+.clock-right{
+    background: orangered;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     color: #fff;
 }
 
