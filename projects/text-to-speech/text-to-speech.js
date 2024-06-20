@@ -4,7 +4,7 @@ const listOfVoice = document.querySelector("select");
 const paragraph = document.getElementById("hover-text");
 const hero = document.getElementById("hero");
 
-function voiceLoader() {
+function voiceOptionLoader() {
   let voices = [];
 
   window.speechSynthesis.onvoiceschanged = () => {
@@ -25,7 +25,7 @@ function voiceLoader() {
   };
 }
 
-voiceLoader();
+voiceOptionLoader();
 
 function textToSpeech(text) {
   const utterance = new SpeechSynthesisUtterance();
