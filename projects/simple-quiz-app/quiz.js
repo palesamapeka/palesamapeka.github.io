@@ -53,6 +53,7 @@ function selectAnswer(e) {
     scoreElement.innerHTML += "🔥";
   } else {
     selectedBtn.classList.add("incorrect");
+    scoreElement.innerHTML += "❌";
   }
 
   Array.from(answerButtons.children).forEach((button) => {
